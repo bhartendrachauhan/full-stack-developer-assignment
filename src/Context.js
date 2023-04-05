@@ -95,7 +95,13 @@ const ContextProvider = (props)=>{
         if(date){
             newData = newData.filter(eachData => eachData.date === date)
         }
-        setState({...state,data:newData,selectedItem:newData[0]})
+        setState({...state,data:newData,selectedItem:newData.length>0?newData[0]:{name:'',
+        id:'',
+        date:'',
+        location:'',
+        time:'',
+        imageUrl:'',
+        gender:''}})
     }
     return(
         <Context.Provider value={{
