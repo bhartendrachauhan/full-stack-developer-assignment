@@ -1,24 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import OptionList from './components/OptionList';
+import PersonView from './components/PersonView';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header/>
+      <div className="flex">
+        <div className=" w-70v h-90v">
+          <PersonView/>
+        </div>
+        <div className="w-30v h-90v border-8 border-[#d9d9d9] border-solid p-4">
+          <OptionList/>
+        </div>
+      </div>
+    </>
   );
 }
 
